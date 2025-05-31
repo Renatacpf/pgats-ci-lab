@@ -1,22 +1,41 @@
-trigger: none  # Nenhum gatilho automático
+# CI de Nível 01 - Disparo manual a partir de 1 clique
 
-pool:
-  vmImage: 'ubuntu-latest'
+# nome do nosso 'pipeline'
+name: 'Execução Manual'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '22.x'
-  displayName: 'Instalar Node.js'
+# regras de disparo (gatilhos/triggers)
+# gatilho para execução manual = workflow_dispatch
+on:
+  workflow_dispatch:
 
-- script: npm install -g yarn
-  displayName: 'Instalar Yarn'
+# trabalhos/tarefas dentro do pipeline = jobs
+jobs:
+  e2e-tests:
+    #maquina que o job vai executar
+    runs-on: ubuntu-latest
 
-- script: yarn
-  displayName: 'Instalar dependências'
+    # passos do script de build
+    steps:
+      # clone do projeto
+      - uses: actions/checkout@v4
 
-- script: yarn playwright install
-  displayName: 'Instalar Playwright'
+      # instalação do Node.js
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
 
-- script: yarn run e2e
-  displayName: 'Executar testes E2E'
+      # instalação do Yarn
+      - name: Instalando Yarn
+        run: npm install -g yarn
+
+      # instalação das dependências
+      - name: Instalando dependências
+        run: yarn
+      
+      # instalação do Playwright
+      - name: Instalando Playwright
+        run: yarn playwright install
+
+      # execução dos testes
+      - name: Executando testes E2E
+        run: yarn run e2e
