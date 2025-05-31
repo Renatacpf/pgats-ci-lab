@@ -1,16 +1,13 @@
-trigger: none
-pr: none
-
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - task: Checkout@1
+  - checkout: self
     displayName: 'Clonar o repositório'
 
-  - task: UseNode@1
+  - task: NodeTool@0
     inputs:
-      version: '22.x'
+      versionSpec: '22.x'
     displayName: 'Instalar Node.js'
 
   - script: npm install -g yarn
