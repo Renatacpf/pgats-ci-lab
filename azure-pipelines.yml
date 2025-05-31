@@ -1,0 +1,22 @@
+trigger: none  # Nenhum gatilho automático
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '22.x'
+  displayName: 'Instalar Node.js'
+
+- script: npm install -g yarn
+  displayName: 'Instalar Yarn'
+
+- script: yarn
+  displayName: 'Instalar dependências'
+
+- script: yarn playwright install
+  displayName: 'Instalar Playwright'
+
+- script: yarn run e2e
+  displayName: 'Executar testes E2E'
