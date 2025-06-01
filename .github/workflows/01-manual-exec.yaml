@@ -27,7 +27,7 @@ jobs:
           Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -ErrorAction SilentlyContinue
           echo "Conteúdo de '$env:GITHUB_WORKSPACE\test-results' antes da limpeza:"
           Get-ChildItem -Path "$env:GITHUB_WORKSPACE\test-results" -Recurse -ErrorAction SilentlyContinue
-        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+        shell: powershell
 
       - name: 2. Limpar diretório de relatórios antigos (remover a pasta inteira)
         run: |
@@ -39,7 +39,7 @@ jobs:
           } else {
             echo "Nenhum diretório de relatórios '$reportDir' encontrado para remover."
           }
-        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+        shell: powershell
 
       - name: 3. Listar arquivos no diretório de trabalho após a limpeza
         run: |
@@ -47,7 +47,7 @@ jobs:
           Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 1
           echo "Conteúdo de '$env:GITHUB_WORKSPACE\test-results' após a limpeza (deve estar vazio ou não existir):"
           Get-ChildItem -Path "$env:GITHUB_WORKSPACE\test-results" -Recurse -ErrorAction SilentlyContinue
-        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+        shell: powershell
 
       # --- FIM DAS ETAPAS DE DEPURACÃO (pré-instalação) ---
 
@@ -59,22 +59,22 @@ jobs:
       # instalação do Yarn
       - name: Instalando Yarn
         run: npm install -g yarn
-        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+        shell: powershell
 
       # instalação das dependências
       - name: Instalando dependências
         run: yarn
-        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+        shell: powershell
 
       # instalação do Playwright
       - name: Instalando Playwright
         run: yarn playwright install
-        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+        shell: powershell
 
       # execução dos testes
       - name: Executando testes E2E
         run: yarn run e2e
-        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+        shell: powershell
 
       # --- INÍCIO DAS ETAPAS DE DEPURACÃO (pós-execução de testes) ---
 
@@ -84,7 +84,7 @@ jobs:
           Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 2
           echo "Conteúdo da pasta 'test-results':"
           Get-ChildItem -Path "$env:GITHUB_WORKSPACE\test-results" -Recurse -ErrorAction SilentlyContinue
-        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+        shell: powershell
 
       - name: 5. Verificar e exibir conteúdo do results.xml gerado (DETALHADO)
         run: |
@@ -97,7 +97,7 @@ jobs:
             echo "ERRO CRÍTICO: Arquivo 'results.xml' NÃO encontrado em '$reportPath' após a execução dos testes."
             exit 1
           }
-        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+        shell: powershell
 
       # --- FIM DAS ETAPAS DE DEPURACÃO ---
 
@@ -108,4 +108,4 @@ jobs:
         with:
           name: Test Report
           path: ./test-results/results.xml
-          reporter: java-junit
+          reporter: junit
