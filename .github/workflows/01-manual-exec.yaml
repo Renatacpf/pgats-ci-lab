@@ -101,11 +101,14 @@ jobs:
 
       # --- FIM DAS ETAPAS DE DEPURACÃO ---
 
-      # Publicar relatório de testes
-      - name: Publicar relatório de testes
-        uses: dorny/test-reporter@v1
-        if: always()
+      # REMOVIDO: O passo "Publicar relatório de testes" com dorny/test-reporter@v1
+      #          foi removido devido à incompatibilidade com o parâmetro 'reporter'.
+
+      # Upload do HTML Report do Playwright como artefato (mantido e recomendado)
+      - name: Upload Playwright HTML Report
+        uses: actions/upload-artifact@v4
+        if: always() # Faz o upload do artefato mesmo se os testes falharem
         with:
-          name: Test Report
-          path: ./test-results/results.xml
-          reporter: xunit
+          name: playwright-html-report # Nome do artefato no GitHub Actions
+          path: playwright-report/    # Caminho para a pasta onde o Playwright gera o HTML report
+          retention-days: 30          # Opcional: tempo de retenção do artefato em dias
