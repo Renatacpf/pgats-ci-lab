@@ -21,7 +21,7 @@ jobs:
 
       # Novo passo para limpar o diretório de relatórios
       - name: Limpando diretório de relatórios antigos
-        run: rmdir /s /q test-results
+        run: Remove-Item -Path test-results -Recurse -Force
 
       # instalação do Node.js
       - uses: actions/setup-node@v4
