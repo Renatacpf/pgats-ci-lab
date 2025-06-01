@@ -108,4 +108,3 @@ jobs:
         with:
           name: Test Report
           path: ./test-results/results.xml
-          reporter: junit
