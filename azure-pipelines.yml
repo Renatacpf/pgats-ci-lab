@@ -1,5 +1,5 @@
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'DESKTOP-IF6UBGF'
 
 steps:
   - checkout: self
