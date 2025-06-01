@@ -40,6 +40,14 @@ jobs:
       - name: Executando testes E2E
         run: yarn run e2e
 
+      # debug relatório gerados
+      - name: Verificando relatórios gerados
+        run: |
+          echo "Diretório atual:"
+          pwd
+          echo "Arquivos existentes:"
+          dir -Recurse
+
       # Relatórios de Testes - Test ReportAdd commentMore actions
       - name: Publicar relatório de testes
         uses: dorny/test-reporter@v1
