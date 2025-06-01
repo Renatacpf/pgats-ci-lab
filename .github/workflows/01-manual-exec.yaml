@@ -100,7 +100,7 @@ jobs:
 
       # Publicar relatório de testes (TENTANDO COM V3)
       - name: Publicar relatório de testes no GitHub (via Test Reporter)
-        uses: dorny/test-reporter@v3
+        uses: dorny/test-reporter@v2
         if: always()
         with:
           name: Test Report
