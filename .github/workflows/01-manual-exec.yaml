@@ -39,3 +39,30 @@ jobs:
       # execução dos testes
       - name: Executando testes E2E
         run: yarn run e2e
+
+      # notificações - slack
+      - name: Enviar notificação para Slack
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          payload: |
+            {
+              "text": "✅ Pipeline finalizada com sucesso!"
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      # Relatórios de Testes - Test Report
+      - name: Publicar relatório de testes
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Test Report
+          path: results.xml
+          reporter: jest-junit
+
+      # IA / Code Review Assistido
+      - name: Run ESLint
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
