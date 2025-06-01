@@ -1,0 +1,4723 @@
+[2025-06-01 19:08:46Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-06-01 19:08:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:46Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.credentials'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known config file 'Runner': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.runner'
+[2025-06-01 19:08:47Z INFO Worker] Version: 2.324.0
+[2025-06-01 19:08:47Z INFO Worker] Commit: da3412efd49b1cf1a0fbdcbcee4e4ac4cc2177c8
+[2025-06-01 19:08:47Z INFO Worker] Culture: pt-BR
+[2025-06-01 19:08:47Z INFO Worker] UI Culture: pt-BR
+[2025-06-01 19:08:47Z INFO Worker] Waiting to receive the job message from the channel.
+[2025-06-01 19:08:47Z INFO ProcessChannel] Receiving message of length 22901, with hash 'd4e89cc2455ec5286e7a76af1c8ad7bfaa3ce084623edf6326334f29a713cd5a'
+[2025-06-01 19:08:47Z INFO Worker] Message received.
+[2025-06-01 19:08:47Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/01-manual-exec.yaml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v4",
+        "repositoryType": "GitHub"
+      },
+      "contextName": "__actions_checkout",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 22,
+        "col": 13,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 22,
+              "col": 13,
+              "lit": "clean"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 22,
+              "col": 20,
+              "lit": "true"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "9044c1f2-1617-4732-aaf5-ddd5d3486544",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 26,
+        "col": 15,
+        "lit": "1. Listar arquivos no diretório de trabalho antes da limpeza"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 27,
+              "col": 14,
+              "lit": "echo \"Conteúdo de '$env:GITHUB_WORKSPACE' antes da limpeza:\"\nGet-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 1\n"
+            }
+          },
+          {
+            "key": "shell",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 30,
+              "col": 16,
+              "lit": "pwsh"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "d5bfc017-bad1-4388-8811-8de9363b3468",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 32,
+        "col": 15,
+        "lit": "2. Limpando relatório de testes anterior (verificação e remoção)"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 33,
+              "col": 14,
+              "lit": "$reportPath = \"$env:GITHUB_WORKSPACE\\results.xml\"\necho \"Tentando remover: $reportPath\"\nif (Test-Path $reportPath) {\n  Remove-Item -Path $reportPath -Force -ErrorAction Stop # Forçar erro se não conseguir remover\n  echo \"Relatório anterior 'results.xml' removido com sucesso.\"\n} else {\n  echo \"Nenhum relatório 'results.xml' anterior encontrado para remover.\"\n}\n"
+            }
+          },
+          {
+            "key": "shell",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 42,
+              "col": 16,
+              "lit": "pwsh"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "f6e5ecb2-9c18-4b46-927b-cfe27f2e145e",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 44,
+        "col": 15,
+        "lit": "3. Listar arquivos no diretório de trabalho após a limpeza"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 45,
+              "col": 14,
+              "lit": "echo \"Conteúdo de '$env:GITHUB_WORKSPACE' após a limpeza:\"\nGet-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 1\n"
+            }
+          },
+          {
+            "key": "shell",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 48,
+              "col": 16,
+              "lit": "pwsh"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "13bcc853-e06a-4a58-acc4-e5e5e420d730",
+      "name": "__run_3"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-node",
+        "ref": "v4",
+        "repositoryType": "GitHub"
+      },
+      "contextName": "__actions_setup-node",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 55,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 55,
+              "col": 11,
+              "lit": "node-version"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 55,
+              "col": 25,
+              "lit": "22.x"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "dd32c290-b3d8-48e3-b504-9cbbb1013010",
+      "name": "__actions_setup-node"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 58,
+        "col": 15,
+        "lit": "Instalando Yarn"
+      },
+      "contextName": "__run_4",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 59,
+              "col": 14,
+              "lit": "npm install -g yarn"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "e53cca92-9633-47c8-97e4-5eafdc7cc5aa",
+      "name": "__run_4"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 62,
+        "col": 15,
+        "lit": "Instalando dependências"
+      },
+      "contextName": "__run_5",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 63,
+              "col": 14,
+              "lit": "yarn"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "d66cb637-5770-4a91-be4d-ba54680292c3",
+      "name": "__run_5"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 66,
+        "col": 15,
+        "lit": "Instalando Playwright"
+      },
+      "contextName": "__run_6",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 67,
+              "col": 14,
+              "lit": "yarn playwright install"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "22e2df4a-3951-4ee4-b745-8accaefd0f93",
+      "name": "__run_6"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 70,
+        "col": 15,
+        "lit": "Executando testes E2E"
+      },
+      "contextName": "__run_7",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 71,
+              "col": 14,
+              "lit": "yarn run e2e"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "e363a9a1-8979-432f-9649-eb2eff244bb9",
+      "name": "__run_7"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 75,
+        "col": 15,
+        "lit": "4. Listar arquivos no diretório de trabalho após a execução dos testes"
+      },
+      "contextName": "__run_8",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 76,
+              "col": 14,
+              "lit": "echo \"Conteúdo de '$env:GITHUB_WORKSPACE' após a execução dos testes:\"\nGet-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 1\n"
+            }
+          },
+          {
+            "key": "shell",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 79,
+              "col": 16,
+              "lit": "pwsh"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "23d38963-6efb-4bb3-874f-b9607746b0eb",
+      "name": "__run_8"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 81,
+        "col": 15,
+        "lit": "5. Verificar e exibir conteúdo do results.xml gerado"
+      },
+      "contextName": "__run_9",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 82,
+              "col": 14,
+              "lit": "$reportPath = \"$env:GITHUB_WORKSPACE\\results.xml\"\necho \"Verificando o arquivo de relatório gerado: $reportPath\"\nif (Test-Path $reportPath) {\n  echo \"Arquivo 'results.xml' encontrado. Conteúdo:\"\n  Get-Content -Path $reportPath | Select-Object -First 20 # Exibe as primeiras 20 linhas\n} else {\n  echo \"ERRO: Arquivo 'results.xml' NÃO encontrado após a execução dos testes.\"\n  exit 1 # Falha o job se o arquivo não for encontrado\n}\n"
+            }
+          },
+          {
+            "key": "shell",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 92,
+              "col": 16,
+              "lit": "pwsh"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "caae0087-d6b0-4179-99be-4636188dd0fb",
+      "name": "__run_9"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "dorny/test-reporter",
+        "ref": "v1",
+        "repositoryType": "GitHub"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 97,
+        "col": 15,
+        "lit": "Publicar relatório de testes"
+      },
+      "contextName": "__dorny_test-reporter",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 101,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 101,
+              "col": 11,
+              "lit": "name"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 101,
+              "col": 17,
+              "lit": "Test Report"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 102,
+              "col": 11,
+              "lit": "path"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 102,
+              "col": 17,
+              "lit": "results.xml"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 103,
+              "col": 11,
+              "lit": "reporter"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 103,
+              "col": 21,
+              "lit": "java-junit"
+            }
+          }
+        ]
+      },
+      "condition": "always()",
+      "id": "0eaae3ec-47c8-4982-b580-b34be77afc14",
+      "name": "__dorny_test-reporter"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "false"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "false"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "e2e-tests"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Actions\":\"write\",\"Attestations\":\"write\",\"Checks\":\"write\",\"Contents\":\"write\",\"Deployments\":\"write\",\"Discussions\":\"write\",\"Issues\":\"write\",\"Metadata\":\"read\",\"Models\":\"read\",\"Packages\":\"write\",\"Pages\":\"write\",\"PullRequests\":\"write\",\"RepositoryProjects\":\"write\",\"SecurityEvents\":\"write\",\"Statuses\":\"write\"}"
+    },
+    "system.orchestrationId": {
+      "value": "6e1a9660-df08-46fc-9c20-473bfd28f918.e2e-tests.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "e2e-tests"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "6e1a9660-df08-46fc-9c20-473bfd28f918",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "6e1a9660-df08-46fc-9c20-473bfd28f918",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "9761f05e-906f-5371-ab31-590e7316137f",
+  "jobDisplayName": "e2e-tests",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://acghubeus2.actions.githubusercontent.com/K38grThfgeu9BNF8KZFcPq67vOE02c1BvVGacPZlwXudDXW5Pj/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus7.actions.githubusercontent.com/K38grThfgeu9BNF8KZFcPq67vOE02c1BvVGacPZlwXudDXW5Pj/",
+          "GenerateIdTokenUrl": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-2-azure-eastus.actions.githubusercontent.com/87/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "d15a15dfd8192ade135efeb8c680652ebf7a247b"
+        },
+        {
+          "k": "repository",
+          "v": "Renatacpf/pgats-ci-lab"
+        },
+        {
+          "k": "repository_owner",
+          "v": "Renatacpf"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "94009738"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/Renatacpf/pgats-ci-lab.git"
+        },
+        {
+          "k": "run_id",
+          "v": "15378462838"
+        },
+        {
+          "k": "run_number",
+          "v": "30"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "actor_id",
+          "v": "94009738"
+        },
+        {
+          "k": "actor",
+          "v": "Renatacpf"
+        },
+        {
+          "k": "workflow",
+          "v": "Execução Manual"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "workflow_dispatch"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "inputs",
+                "v": null
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/Renatacpf/pgats-ci-lab.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2025-05-24T16:41:20Z"
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": true
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "Renatacpf/pgats-ci-lab"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/Renatacpf/pgats-ci-lab.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": false
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/Renatacpf/pgats-ci-lab"
+                    },
+                    {
+                      "k": "id",
+                      "v": 989701844.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "TypeScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "pgats-ci-lab"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOOv2m1A"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/94009738?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/Renatacpf/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/Renatacpf/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/Renatacpf/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/Renatacpf/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/Renatacpf"
+                          },
+                          {
+                            "k": "id",
+                            "v": 94009738.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "Renatacpf"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOBZp5ig"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/Renatacpf/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/Renatacpf/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/Renatacpf/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/Renatacpf/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/Renatacpf/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/Renatacpf"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": "2025-06-01T19:08:06Z"
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 149935.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:Renatacpf/pgats-ci-lab.git"
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/Renatacpf/pgats-ci-lab"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2025-06-01T19:08:09Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/Renatacpf/pgats-ci-lab"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/94009738?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/Renatacpf/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/Renatacpf/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/Renatacpf/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/Renatacpf/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/Renatacpf"
+                    },
+                    {
+                      "k": "id",
+                      "v": 94009738.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "Renatacpf"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDOBZp5ig"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/Renatacpf/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/Renatacpf/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/Renatacpf/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/Renatacpf/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/Renatacpf/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/Renatacpf"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "workflow",
+                "v": ".github/workflows/01-manual-exec.yaml"
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "Renatacpf/pgats-ci-lab/.github/workflows/01-manual-exec.yaml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "d15a15dfd8192ade135efeb8c680652ebf7a247b"
+        },
+        {
+          "k": "repository_id",
+          "v": "989701844"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "Renatacpf"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDOBZp5ig"
+}
+[2025-06-01 19:08:47Z INFO JobRunner] Job ID 9761f05e-906f-5371-ab31-590e7316137f
+[2025-06-01 19:08:47Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin\Runner.Worker.dll
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO ConfigurationStore] binPath: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO ConfigurationStore] RootFolder: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known config file 'Runner': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.runner'
+[2025-06-01 19:08:47Z INFO ConfigurationStore] ConfigFilePath: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.runner
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.runner_migrated'
+[2025-06-01 19:08:47Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.runner_migrated
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.credentials'
+[2025-06-01 19:08:47Z INFO ConfigurationStore] CredFilePath: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.credentials
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.credentials_migrated'
+[2025-06-01 19:08:47Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.credentials_migrated
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known config file 'Service': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.service'
+[2025-06-01 19:08:47Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.service
+[2025-06-01 19:08:47Z INFO ConfigurationStore] Read setting file: 401 chars
+[2025-06-01 19:08:47Z INFO JobRunner] Initializing launch client
+[2025-06-01 19:08:47Z INFO JobServerQueue] Initializing results client
+[2025-06-01 19:08:47Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2025-06-01 19:08:47Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2025-06-01 19:08:47Z INFO JobServerQueue] Start process web console line queue.
+[2025-06-01 19:08:47Z INFO JobServerQueue] Start process file upload queue.
+[2025-06-01 19:08:47Z INFO JobServerQueue] Start results file upload queue.
+[2025-06-01 19:08:47Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-06-01 19:08:47Z INFO JobServerQueue] Start process timeline update queue.
+[2025-06-01 19:08:47Z INFO ExecutionContext] Initializing Job context
+[2025-06-01 19:08:47Z INFO ExecutionContext] Initialize GitHub context
+[2025-06-01 19:08:47Z INFO ExecutionContext] Initialize Env context
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:47Z INFO JobRunner] Starting the job execution context.
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:47Z INFO JobRunner] Validating directory permissions for: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Tools': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_tool'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Temp': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp'
+[2025-06-01 19:08:47Z INFO JobRunner] Getting job extension.
+[2025-06-01 19:08:47Z INFO JobRunner] Initialize job. Getting all job steps.
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.credentials'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\.setup_info'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:47Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_PipelineMapping\Renatacpf/pgats-ci-lab\PipelineFolder.json
+[2025-06-01 19:08:47Z INFO PipelineDirectoryManager] Updating job run properties.
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:47Z INFO JobExtension] Downloading actions
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:47Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:47Z INFO Worker] Listening for cancel message from the channel.
+[2025-06-01 19:08:47Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2025-06-01 19:08:47Z INFO ResultServer] Successfully started websocket client.
+[2025-06-01 19:08:47Z INFO JobServerQueue] Try to append 1 batches web console lines for record '983b1e5f-6397-454d-a09e-8c89bdf58e74', success rate: 1/1.
+[2025-06-01 19:08:48Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:48Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:48Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:48Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:48Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:48Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:48Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:48Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:48Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/11bd71901bbe5b1630ceea73d27597364c9af683' into C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\_temp_938b11b1-603e-480f-8a8b-aa843a63bfdb\41cae2da-1e94-4c03-b07f-9ac1a692d652.zip.
+[2025-06-01 19:08:48Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2025-06-01 19:08:48Z INFO JobServerQueue] Try to append 1 batches web console lines for record '983b1e5f-6397-454d-a09e-8c89bdf58e74', success rate: 1/1.
+[2025-06-01 19:08:48Z INFO ActionManager] Request URL: https://api.github.com/repos/actions/checkout/zipball/11bd71901bbe5b1630ceea73d27597364c9af683 X-GitHub-Request-Id: CFFB:2A3D6B:2B6A5:13F7B7:683CA540 Http Status: OK
+[2025-06-01 19:08:49Z INFO ActionManager] Finished getting action repository.
+[2025-06-01 19:08:49Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:49Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:49Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:49Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:49Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:49Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:49Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:49Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:49Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/setup-node/zipball/49933ea5288caeca8642d1e84afbd3f7d6820020' into C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\_temp_568af07f-1efe-46d9-a6cb-52021b1c9b50\a25224ed-1d05-4724-86aa-05b55d1ef161.zip.
+[2025-06-01 19:08:49Z INFO JobServerQueue] Try to append 1 batches web console lines for record '983b1e5f-6397-454d-a09e-8c89bdf58e74', success rate: 1/1.
+[2025-06-01 19:08:50Z INFO ActionManager] Request URL: https://api.github.com/repos/actions/setup-node/zipball/49933ea5288caeca8642d1e84afbd3f7d6820020 X-GitHub-Request-Id: CA0D:192FCA:3B66C:19556D:683CA541 Http Status: OK
+[2025-06-01 19:08:50Z INFO ActionManager] Finished getting action repository.
+[2025-06-01 19:08:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:50Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:50Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:50Z INFO ActionManager] Save archive 'https://api.github.com/repos/dorny/test-reporter/zipball/d61b558e8df85cb60d09ca3e5b09653b4477cea7' into C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\_temp_4d0d7a7a-7136-441d-ab79-38b2b47a2a29\bfc0754b-bb4b-43fd-b51a-8b2d52058f47.zip.
+[2025-06-01 19:08:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record '983b1e5f-6397-454d-a09e-8c89bdf58e74', success rate: 1/1.
+[2025-06-01 19:08:51Z INFO ActionManager] Request URL: https://api.github.com/repos/dorny/test-reporter/zipball/d61b558e8df85cb60d09ca3e5b09653b4477cea7 X-GitHub-Request-Id: CED3:34E2A7:3A7D9:1946C6:683CA543 Http Status: OK
+[2025-06-01 19:08:52Z INFO ActionManager] Finished getting action repository.
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-01 19:08:52Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManager] Load action that reference repository from 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\actions\checkout\v4'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-01 19:08:52Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-01 19:08:52Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-01 19:08:52Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Ignore action property author.
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "node-version-file"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 23,
+          "col": 14,
+          "expr": "github.server_url == 'https://github.com' && github.token || ''"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 24,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 26,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 28,
+          "col": 3,
+          "lit": "mirror"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 30,
+          "col": 3,
+          "lit": "mirror-token"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-01 19:08:52Z INFO ActionManager] Action node.js file: dist/setup/index.js, no more preparation.
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManager] Load action that reference repository from 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\actions\setup-node\v4'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Ignore action property author.
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "node-version-file"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 23,
+          "col": 14,
+          "expr": "github.server_url == 'https://github.com' && github.token || ''"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 24,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 26,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 28,
+          "col": 3,
+          "lit": "mirror"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 30,
+          "col": 3,
+          "lit": "mirror-token"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-01 19:08:52Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-01 19:08:52Z INFO ActionManager] Action node.js file: dist/setup/index.js.
+[2025-06-01 19:08:52Z INFO ActionManager] Action post node.js file: dist/cache-save/index.js.
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Ignore action property author.
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Ignore action property branding.
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Test Reporter",
+  "description": "Shows test results in GitHub UI: .NET (xUnit, NUnit, MSTest), Dart, Flutter, Java (JUnit), JavaScript (JEST, Mocha)\n",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 6,
+          "col": 3,
+          "lit": "artifact"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 9,
+          "col": 3,
+          "lit": "name"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 12,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 18,
+          "col": 3,
+          "lit": "path-replace-backslashes"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 23,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 25,
+          "col": 3,
+          "lit": "reporter"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 37,
+          "col": 3,
+          "lit": "list-suites"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 43,
+          "col": 14,
+          "lit": "all"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 44,
+          "col": 3,
+          "lit": "list-tests"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 51,
+          "col": 14,
+          "lit": "all"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 52,
+          "col": 3,
+          "lit": "max-annotations"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 57,
+          "col": 14,
+          "lit": "10"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 58,
+          "col": 3,
+          "lit": "fail-on-error"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 61,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 62,
+          "col": 3,
+          "lit": "fail-on-empty"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 65,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 66,
+          "col": 3,
+          "lit": "working-directory"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 69,
+          "col": 3,
+          "lit": "only-summary"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 74,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 76,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 4,
+          "line": 79,
+          "col": 14,
+          "expr": "github.token"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-01 19:08:52Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManager] Load action that reference repository from 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\dorny\test-reporter\v1'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Ignore action property author.
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Ignore action property branding.
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Test Reporter",
+  "description": "Shows test results in GitHub UI: .NET (xUnit, NUnit, MSTest), Dart, Flutter, Java (JUnit), JavaScript (JEST, Mocha)\n",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 6,
+          "col": 3,
+          "lit": "artifact"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 9,
+          "col": 3,
+          "lit": "name"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 12,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 18,
+          "col": 3,
+          "lit": "path-replace-backslashes"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 23,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 25,
+          "col": 3,
+          "lit": "reporter"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 37,
+          "col": 3,
+          "lit": "list-suites"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 43,
+          "col": 14,
+          "lit": "all"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 44,
+          "col": 3,
+          "lit": "list-tests"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 51,
+          "col": 14,
+          "lit": "all"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 52,
+          "col": 3,
+          "lit": "max-annotations"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 57,
+          "col": 14,
+          "lit": "10"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 58,
+          "col": 3,
+          "lit": "fail-on-error"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 61,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 62,
+          "col": 3,
+          "lit": "fail-on-empty"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 65,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 66,
+          "col": 3,
+          "lit": "working-directory"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 69,
+          "col": 3,
+          "lit": "only-summary"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 74,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 76,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 4,
+          "line": 79,
+          "col": 14,
+          "expr": "github.token"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-01 19:08:52Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-01 19:08:52Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-01 19:08:52Z INFO ActionManager] Action post node.js file: N/A.
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO JobExtension] Adding .
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO JobExtension] Total accessible running process: 246.
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO JobExtension] Start checking service connectivity in background.
+[2025-06-01 19:08:52Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "983b1e5f-6397-454d-a09e-8c89bdf58e74",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 5,
+  "startTime": "2025-06-01T19:08:47.3747266Z",
+  "finishTime": "2025-06-01T19:08:52.3337028Z"
+}.
+[2025-06-01 19:08:52Z INFO JobRunner] Total job steps: 12.
+[2025-06-01 19:08:52Z INFO JobRunner] Run all job steps.
+[2025-06-01 19:08:52Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v4'
+[2025-06-01 19:08:52Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:08:52Z INFO StepsRunner] Result: true
+[2025-06-01 19:08:52Z INFO StepsRunner] Starting the step.
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO StepsRunner] Which2: 'chcp'
+[2025-06-01 19:08:52Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper] Process started with process id 13908, waiting for process exit.
+[2025-06-01 19:08:52Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-01 19:08:52Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\blocks\6e1a9660-df08-46fc-9c20-473bfd28f918_983b1e5f-6397-454d-a09e-8c89bdf58e74.1
+[2025-06-01 19:08:52Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper] Finished process 13908 with exit code 0, and elapsed time 00:00:00.0145616.
+[2025-06-01 19:08:52Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO ActionManager] Load action that reference repository from 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\actions\checkout\v4'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:08:52Z INFO JobServerQueue] Try to append 1 batches web console lines for record '983b1e5f-6397-454d-a09e-8c89bdf58e74', success rate: 1/1.
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-01 19:08:52Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-01 19:08:52Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-01 19:08:52Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-06-01 19:08:52Z INFO ExecutionContext] Reserve record order 14 to 26 for post job actions.
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Temp': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp'
+[2025-06-01 19:08:52Z INFO ExecutionContext] Write event payload to C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Temp': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp'
+[2025-06-01 19:08:52Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "Renatacpf/pgats-ci-lab"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'ssh-user': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 51,
+  "col": 14,
+  "lit": "git"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 54,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": ""
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": ""
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 76,
+  "col": 14,
+  "lit": "1"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 94,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:08:52Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-06-01 19:08:52Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command error
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command group
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-06-01 19:08:52Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:08:52Z INFO HostContext] Well known directory 'Externals': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals\node20\bin\node.exe'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\actions\checkout\v4\dist/index.js"'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\pgats-ci-lab\pgats-ci-lab'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-01 19:08:52Z INFO ProcessInvokerWrapper] Process started with process id 12204, waiting for process exit.
+[2025-06-01 19:08:52Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:08:53Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2025-06-01 19:08:53Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:08:53Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-06-01 19:08:53Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:08:56Z INFO JobServerQueue] Try to append 2 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 2/2.
+[2025-06-01 19:08:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:02Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:02Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:02Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:12Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:12Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:12Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] Finished process 12204 with exit code 0, and elapsed time 00:00:28.4389047.
+[2025-06-01 19:09:20Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp\_runner_file_commands\step_summary_331e6552-4692-4805-9c01-5c4cc2ff60b4) is empty; skipping attachment upload
+[2025-06-01 19:09:20Z INFO StepsRunner] Step result: 
+[2025-06-01 19:09:20Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "9044c1f2-1617-4732-aaf5-ddd5d3486544",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [
+    "no submodule mapping found in .gitmodules for path 'actions-runner/_work/pgats-ci-lab/pgats-ci-lab'",
+    "Unable to clean or reset the repository. The repository will be recreated instead."
+  ],
+  "executionTimeInSeconds": 29,
+  "startTime": "2025-06-01T19:08:52.3529229Z",
+  "finishTime": "2025-06-01T19:09:20.9158972Z"
+}.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = ''
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='1. Listar arquivos no diretório de trabalho antes da limpeza'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: true
+[2025-06-01 19:09:20Z INFO StepsRunner] Starting the step.
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:20Z INFO StepsRunner] Which2: 'chcp'
+[2025-06-01 19:09:20Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-01 19:09:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9044c1f2-1617-4732-aaf5-ddd5d3486544', success rate: 1/1.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] Process started with process id 16364, waiting for process exit.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] Finished process 16364 with exit code 0, and elapsed time 00:00:00.0147346.
+[2025-06-01 19:09:20Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Temp': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp'
+[2025-06-01 19:09:20Z INFO ExecutionContext] Write event payload to C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Temp': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp'
+[2025-06-01 19:09:20Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-06-01 19:09:20Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command error
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command group
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-06-01 19:09:20Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-06-01 19:09:20Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-06-01 19:09:20Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-06-01 19:09:20Z ERR  StepsRunner] Caught exception from step: System.IO.FileNotFoundException: pwsh: command not found
+File name: 'pwsh'
+   at GitHub.Runner.Sdk.WhichUtil.Which(String command, Boolean require, ITraceWriter trace, String prependPath)
+   at GitHub.Runner.Worker.Handlers.ScriptHandler.PrintActionDetails(ActionRunStage stage)
+   at GitHub.Runner.Worker.Handlers.Handler.PrepareExecution(ActionRunStage stage)
+   at GitHub.Runner.Worker.ActionRunner.RunAsync()
+   at GitHub.Runner.Worker.StepsRunner.RunStepAsync(IStep step, CancellationToken jobCancellationToken)
+[2025-06-01 19:09:20Z INFO StepsRunner] Step result: Failed
+[2025-06-01 19:09:20Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='2. Limpando relatório de testes anterior (verificação e remoção)'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: false
+[2025-06-01 19:09:20Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='3. Listar arquivos no diretório de trabalho após a limpeza'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: false
+[2025-06-01 19:09:20Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='Run actions/setup-node@v4'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: false
+[2025-06-01 19:09:20Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='Instalando Yarn'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: false
+[2025-06-01 19:09:20Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='Instalando dependências'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: false
+[2025-06-01 19:09:20Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='Instalando Playwright'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: false
+[2025-06-01 19:09:20Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='Executando testes E2E'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: false
+[2025-06-01 19:09:20Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='4. Listar arquivos no diretório de trabalho após a execução dos testes'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: false
+[2025-06-01 19:09:20Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='5. Verificar e exibir conteúdo do results.xml gerado'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: success()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: false
+[2025-06-01 19:09:20Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-06-01 19:09:20Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-06-01 19:09:20Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:20Z INFO StepsRunner] Processing step: DisplayName='Publicar relatório de testes'
+[2025-06-01 19:09:20Z INFO StepsRunner] Evaluating: always()
+[2025-06-01 19:09:20Z INFO StepsRunner] Result: true
+[2025-06-01 19:09:20Z INFO StepsRunner] Starting the step.
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:20Z INFO StepsRunner] Which2: 'chcp'
+[2025-06-01 19:09:20Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] Process started with process id 16876, waiting for process exit.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:20Z INFO ProcessInvokerWrapper] Finished process 16876 with exit code 0, and elapsed time 00:00:00.0141991.
+[2025-06-01 19:09:20Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:09:20Z INFO ActionManager] Load action that reference repository from 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\dorny\test-reporter\v1'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:20Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Ignore action property author.
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Ignore action property branding.
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Test Reporter",
+  "description": "Shows test results in GitHub UI: .NET (xUnit, NUnit, MSTest), Dart, Flutter, Java (JUnit), JavaScript (JEST, Mocha)\n",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 6,
+          "col": 3,
+          "lit": "artifact"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 9,
+          "col": 3,
+          "lit": "name"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 12,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 18,
+          "col": 3,
+          "lit": "path-replace-backslashes"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 23,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 25,
+          "col": 3,
+          "lit": "reporter"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 37,
+          "col": 3,
+          "lit": "list-suites"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 43,
+          "col": 14,
+          "lit": "all"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 44,
+          "col": 3,
+          "lit": "list-tests"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 51,
+          "col": 14,
+          "lit": "all"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 52,
+          "col": 3,
+          "lit": "max-annotations"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 57,
+          "col": 14,
+          "lit": "10"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 58,
+          "col": 3,
+          "lit": "fail-on-error"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 61,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 62,
+          "col": 3,
+          "lit": "fail-on-empty"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 65,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 66,
+          "col": 3,
+          "lit": "working-directory"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 69,
+          "col": 3,
+          "lit": "only-summary"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 74,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 76,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 4,
+          "line": 79,
+          "col": 14,
+          "expr": "github.token"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-01 19:09:21Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-01 19:09:21Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-01 19:09:21Z INFO ActionManager] Action post node.js file: N/A.
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Temp': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp'
+[2025-06-01 19:09:21Z INFO ExecutionContext] Write event payload to C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Temp': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp'
+[2025-06-01 19:09:21Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'artifact': default value evaluate result: ""
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'path-replace-backslashes': default value evaluate result: {
+  "type": 0,
+  "file": 4,
+  "line": 23,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'list-suites': default value evaluate result: {
+  "type": 0,
+  "file": 4,
+  "line": 43,
+  "col": 14,
+  "lit": "all"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'list-tests': default value evaluate result: {
+  "type": 0,
+  "file": 4,
+  "line": 51,
+  "col": 14,
+  "lit": "all"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'max-annotations': default value evaluate result: {
+  "type": 0,
+  "file": 4,
+  "line": 57,
+  "col": 14,
+  "lit": "10"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'fail-on-error': default value evaluate result: {
+  "type": 0,
+  "file": 4,
+  "line": 61,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'fail-on-empty': default value evaluate result: {
+  "type": 0,
+  "file": 4,
+  "line": 65,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'working-directory': default value evaluate result: ""
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'only-summary': default value evaluate result: {
+  "type": 0,
+  "file": 4,
+  "line": 74,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 4,
+  "line": 79,
+  "col": 14,
+  "lit": "***"
+}
+[2025-06-01 19:09:21Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command error
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command group
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Externals': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals\node20\bin\node.exe'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\dorny\test-reporter\v1\dist/index.js"'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\pgats-ci-lab\pgats-ci-lab'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] Process started with process id 8252, waiting for process exit.
+[2025-06-01 19:09:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd5bfc017-bad1-4388-8811-8de9363b3468', success rate: 1/1.
+[2025-06-01 19:09:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0eaae3ec-47c8-4982-b580-b34be77afc14', success rate: 1/1.
+[2025-06-01 19:09:21Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-01 19:09:21Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\blocks\6e1a9660-df08-46fc-9c20-473bfd28f918_9044c1f2-1617-4732-aaf5-ddd5d3486544.1
+[2025-06-01 19:09:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0eaae3ec-47c8-4982-b580-b34be77afc14', success rate: 1/1.
+[2025-06-01 19:09:21Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] Finished process 8252 with exit code 1, and elapsed time 00:00:00.7602423.
+[2025-06-01 19:09:21Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp\_runner_file_commands\step_summary_db8a356a-a02d-4a5f-905e-4094965b79d4) is empty; skipping attachment upload
+[2025-06-01 19:09:21Z INFO StepsRunner] Step result: Failed
+[2025-06-01 19:09:21Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "dorny/test-reporter",
+  "ref": "v1",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "0eaae3ec-47c8-4982-b580-b34be77afc14",
+  "stepContextName": "__dorny_test-reporter",
+  "hasPreStep": false,
+  "hasPostStep": false,
+  "result": "failed",
+  "errorMessages": [
+    "No file matches path results.xml",
+    "No test report files were found"
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-06-01T19:09:20.981019Z",
+  "finishTime": "2025-06-01T19:09:21.7915561Z"
+}.
+[2025-06-01 19:09:21Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2025-06-01 19:09:21Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:21Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v4'
+[2025-06-01 19:09:21Z INFO StepsRunner] Evaluating: always()
+[2025-06-01 19:09:21Z INFO StepsRunner] Result: true
+[2025-06-01 19:09:21Z INFO StepsRunner] Starting the step.
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:21Z INFO StepsRunner] Which2: 'chcp'
+[2025-06-01 19:09:21Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] Process started with process id 2340, waiting for process exit.
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] Finished process 2340 with exit code 0, and elapsed time 00:00:00.0112816.
+[2025-06-01 19:09:21Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:09:21Z INFO ActionManager] Load action that reference repository from 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\actions\checkout\v4'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Actions': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions'
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-01 19:09:21Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-01 19:09:21Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-01 19:09:21Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Temp': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp'
+[2025-06-01 19:09:21Z INFO ExecutionContext] Write event payload to C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Temp': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp'
+[2025-06-01 19:09:21Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "Renatacpf/pgats-ci-lab"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'ssh-user': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 51,
+  "col": 14,
+  "lit": "git"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 54,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": ""
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": ""
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 76,
+  "col": 14,
+  "lit": "1"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 94,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-01 19:09:21Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-06-01 19:09:21Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command error
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command group
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-06-01 19:09:21Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:21Z INFO HostContext] Well known directory 'Externals': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals\node20\bin\node.exe'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_actions\actions\checkout\v4\dist/index.js"'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\pgats-ci-lab\pgats-ci-lab'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-01 19:09:21Z INFO ProcessInvokerWrapper] Process started with process id 7624, waiting for process exit.
+[2025-06-01 19:09:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0eaae3ec-47c8-4982-b580-b34be77afc14', success rate: 1/1.
+[2025-06-01 19:09:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '33ed4ef4-a0ec-47f4-97f4-7465abb3e715', success rate: 1/1.
+[2025-06-01 19:09:22Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2025-06-01 19:09:22Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-01 19:09:22Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\blocks\6e1a9660-df08-46fc-9c20-473bfd28f918_d5bfc017-bad1-4388-8811-8de9363b3468.1
+[2025-06-01 19:09:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '33ed4ef4-a0ec-47f4-97f4-7465abb3e715', success rate: 1/1.
+[2025-06-01 19:09:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:22Z INFO HostContext] Well known directory 'Work': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work'
+[2025-06-01 19:09:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '33ed4ef4-a0ec-47f4-97f4-7465abb3e715', success rate: 1/1.
+[2025-06-01 19:09:22Z INFO JobServerQueue] Tried to upload 2 file(s) to results, success rate: 2/2.
+[2025-06-01 19:09:22Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-06-01 19:09:23Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-01 19:09:23Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\blocks\6e1a9660-df08-46fc-9c20-473bfd28f918_0eaae3ec-47c8-4982-b580-b34be77afc14.1
+[2025-06-01 19:09:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-01 19:09:23Z INFO ProcessInvokerWrapper] Finished process 7624 with exit code 0, and elapsed time 00:00:02.0227627.
+[2025-06-01 19:09:23Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp\_runner_file_commands\step_summary_9c8dc482-e13d-4751-a949-6365fb9b1b49) is empty; skipping attachment upload
+[2025-06-01 19:09:23Z INFO StepsRunner] Step result: 
+[2025-06-01 19:09:23Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Post",
+  "stepId": "33ed4ef4-a0ec-47f4-97f4-7465abb3e715",
+  "result": "succeeded",
+  "errorMessages": [
+    "The process 'C:\\Program Files\\Git\\cmd\\git.exe' failed with exit code 128"
+  ],
+  "executionTimeInSeconds": 3,
+  "startTime": "2025-06-01T19:09:21.7934704Z",
+  "finishTime": "2025-06-01T19:09:23.8479295Z"
+}.
+[2025-06-01 19:09:23Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-06-01 19:09:23Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-01 19:09:23Z INFO JobRunner] Finalize job.
+[2025-06-01 19:09:23Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:23Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:23Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:09:23Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:23Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:23Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:09:23Z INFO JobExtension] Initialize Env context
+[2025-06-01 19:09:23Z INFO JobExtension] Initialize steps context
+[2025-06-01 19:09:23Z INFO JobExtension] Total accessible running process: 240.
+[2025-06-01 19:09:23Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "1741000d-b402-47a3-9d30-a2579f7d4ab6",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-06-01T19:09:23.8585739Z",
+  "finishTime": "2025-06-01T19:09:23.872294Z"
+}.
+[2025-06-01 19:09:23Z INFO JobRunner] Job result after all job steps finish: Failed
+[2025-06-01 19:09:23Z INFO JobRunner] Completing the job execution context.
+[2025-06-01 19:09:23Z INFO JobRunner] Shutting down the job server queue.
+[2025-06-01 19:09:23Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2025-06-01 19:09:24Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-06-01 19:09:25Z INFO JobServerQueue] All queue process task stopped.
+[2025-06-01 19:09:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '33ed4ef4-a0ec-47f4-97f4-7465abb3e715', success rate: 1/1.
+[2025-06-01 19:09:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '1741000d-b402-47a3-9d30-a2579f7d4ab6', success rate: 1/1.
+[2025-06-01 19:09:25Z INFO JobServerQueue] Web console line queue drained.
+[2025-06-01 19:09:25Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2025-06-01 19:09:25Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2025-06-01 19:09:25Z INFO JobServerQueue] File upload queue drained.
+[2025-06-01 19:09:25Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-06-01 19:09:25Z INFO JobServerQueue] Uploading 3 file(s) in one shot through results service.
+[2025-06-01 19:09:25Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-01 19:09:25Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\blocks\6e1a9660-df08-46fc-9c20-473bfd28f918_33ed4ef4-a0ec-47f4-97f4-7465abb3e715.1
+[2025-06-01 19:09:25Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-01 19:09:25Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\blocks\6e1a9660-df08-46fc-9c20-473bfd28f918_1741000d-b402-47a3-9d30-a2579f7d4ab6.1
+[2025-06-01 19:09:26Z INFO JobServerQueue] Got a job log file to send to results service.
+[2025-06-01 19:09:26Z INFO JobServerQueue] Starting upload of job log file to results service ResultsLog, C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\blocks\6e1a9660-df08-46fc-9c20-473bfd28f918_9761f05e-906f-5371-ab31-590e7316137f.1
+[2025-06-01 19:09:26Z INFO JobServerQueue] Tried to upload 3 file(s) to results, success rate: 3/3.
+[2025-06-01 19:09:26Z INFO JobServerQueue] Results upload queue drained.
+[2025-06-01 19:09:26Z INFO JobServerQueue] Timeline update queue drained.
+[2025-06-01 19:09:26Z INFO JobServerQueue] Disposing job server ...
+[2025-06-01 19:09:26Z INFO JobServerQueue] Disposing results server ...
+[2025-06-01 19:09:26Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2025-06-01 19:09:26Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_work\_temp
+[2025-06-01 19:09:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin'
+[2025-06-01 19:09:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner'
+[2025-06-01 19:09:26Z INFO HostContext] Well known directory 'Diag': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag'
+[2025-06-01 19:09:26Z INFO HostContext] Well known config file 'Telemetry': 'C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\.telemetry'
+[2025-06-01 19:09:26Z INFO JobRunner] Raising job completed against run service
+[2025-06-01 19:09:27Z INFO Worker] Job completed.
