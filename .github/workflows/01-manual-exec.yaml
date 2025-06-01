@@ -18,8 +18,10 @@ jobs:
     steps:
       # clone do projeto
       - uses: actions/checkout@v4
-        with:
-            clean: true
+
+      # Novo passo para limpar o diretório de relatórios
+      - name: Limpando diretório de relatórios antigos
+        run: rmdir /s /q test-results
 
       # instalação do Node.js
       - uses: actions/setup-node@v4
@@ -48,5 +50,5 @@ jobs:
         if: always()
         with:
           name: Test Report
-          path: results.xml
+          path: ./test-results/results.xml
           reporter: java-junit
