@@ -40,10 +40,17 @@ jobs:
       - name: Executando testes E2E
         run: yarn run e2e
 
+      # verificar se o arquivo existe
+      - name: Verificando se o relatório foi criado
+        run: |
+          ls -R
+
       # Relatórios de Testes - Test Report
-      - name: Publicar relatório de testes
+      - name: Publicar resultados dos testes
         uses: dorny/test-reporter@v1
+        if: always()
         with:
           name: Test Report
-          path: test-results/results.xml
+          path: ./test-results/results.xml
           reporter: jest-junit
+
