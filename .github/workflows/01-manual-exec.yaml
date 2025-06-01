@@ -103,9 +103,9 @@ jobs:
 
       # Publicar relatório de testes
       - name: Publicar relatório de testes
-        uses: dorny/test-reporter@v2
+        uses: dorny/test-reporter@v1
         if: always()
         with:
           name: Test Report
           path: ./test-results/results.xml
-          reporter: junit
+          reporter: xunit
