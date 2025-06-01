@@ -18,6 +18,8 @@ jobs:
     steps:
       # clone do projeto
       - uses: actions/checkout@v4
+        with:
+            clean: true
 
       # instalação do Node.js
       - uses: actions/setup-node@v4
@@ -36,10 +38,6 @@ jobs:
       - name: Instalando Playwright
         run: yarn playwright install
 
-      # criação do diretório para relatórios
-      - name: Criando diretório para relatório
-        run: mkdir -p test-results
-
       # execução dos testes
       - name: Executando testes E2E
         run: yarn run e2e
@@ -50,5 +48,5 @@ jobs:
         if: always()
         with:
           name: Test Report
-          path: results.xml
+          path: ./test-results/results.xml
           reporter: java-junit
