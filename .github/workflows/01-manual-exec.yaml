@@ -18,10 +18,12 @@ jobs:
     steps:
       # clone do projeto
       - uses: actions/checkout@v4
-
-      # Novo passo para limpar o diretório de relatórios
-      - name: Limpando diretório de relatórios antigos
-        run: Remove-Item -Path test-results -Recurse -Force
+        with:
+            clean: true
+    
+      # remover arquivo results.xml caso exista
+      - name: Limpando relatório de testes anterior
+        run: Remove-Item -Path results.xml -ErrorAction SilentlyContinue
 
       # instalação do Node.js
       - uses: actions/setup-node@v4
@@ -50,5 +52,5 @@ jobs:
         if: always()
         with:
           name: Test Report
-          path: ./test-results/results.xml
+          path: results.xml
           reporter: java-junit
