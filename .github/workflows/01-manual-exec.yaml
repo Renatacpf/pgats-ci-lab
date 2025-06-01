@@ -36,6 +36,10 @@ jobs:
       - name: Instalando Playwright
         run: yarn playwright install
 
+      # criação do diretório para relatórios
+      - name: Criando diretório para relatório
+        run: mkdir -p test-results
+
       # execução dos testes
       - name: Executando testes E2E
         run: yarn run e2e
