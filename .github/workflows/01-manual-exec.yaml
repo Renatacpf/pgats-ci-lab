@@ -98,16 +98,16 @@ jobs:
         shell: powershell
       # --- FIM DAS ETAPAS DE DEPURACÃO ---
 
-      # Publicar relatório de testes (TENTANDO COM V3)
+      # Publicar relatório de testes
       - name: Publicar relatório de testes no GitHub (via Test Reporter)
-        uses: dorny/test-reporter@v2
+        uses: dorny/test-reporter@v1
         if: always()
         with:
           name: Test Report
           path: ./test-results/results.xml
           reporter: junit
 
-      # Upload do HTML Report do Playwright como artefato (MANTIDO)
+      # Upload do HTML Report do Playwright como artefato
       - name: Upload Playwright HTML Report
         uses: actions/upload-artifact@v4
         if: always()
