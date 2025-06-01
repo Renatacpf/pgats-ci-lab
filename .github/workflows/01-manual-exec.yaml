@@ -16,7 +16,7 @@ jobs:
       # clone do projeto
       - uses: actions/checkout@v4
         with:
-          clean: true # Mantém a limpeza do diretório de checkout
+          clean: true
 
       # --- INÍCIO DAS ETAPAS DE DEPURACÃO APRIMORADAS ---
 
@@ -24,22 +24,22 @@ jobs:
         run: |
           echo "Diretório de trabalho atual: $(pwd)"
           echo "Conteúdo de '$env:GITHUB_WORKSPACE' antes da limpeza:"
-          Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -ErrorAction SilentlyContinue # Lista tudo, incluindo subpastas
+          Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -ErrorAction SilentlyContinue
           echo "Conteúdo de '$env:GITHUB_WORKSPACE\test-results' antes da limpeza:"
           Get-ChildItem -Path "$env:GITHUB_WORKSPACE\test-results" -Recurse -ErrorAction SilentlyContinue
-        shell: pwsh
+        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
 
       - name: 2. Limpar diretório de relatórios antigos (remover a pasta inteira)
         run: |
           $reportDir = "$env:GITHUB_WORKSPACE\test-results"
           echo "Tentando remover diretório de relatórios: $reportDir"
           if (Test-Path $reportDir) {
-            Remove-Item -Path $reportDir -Recurse -Force -ErrorAction Stop # Remove a pasta inteira e força
+            Remove-Item -Path $reportDir -Recurse -Force -ErrorAction Stop
             echo "Diretório de relatórios '$reportDir' removido com sucesso."
           } else {
             echo "Nenhum diretório de relatórios '$reportDir' encontrado para remover."
           }
-        shell: pwsh
+        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
 
       - name: 3. Listar arquivos no diretório de trabalho após a limpeza
         run: |
@@ -47,7 +47,7 @@ jobs:
           Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 1
           echo "Conteúdo de '$env:GITHUB_WORKSPACE\test-results' após a limpeza (deve estar vazio ou não existir):"
           Get-ChildItem -Path "$env:GITHUB_WORKSPACE\test-results" -Recurse -ErrorAction SilentlyContinue
-        shell: pwsh
+        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
 
       # --- FIM DAS ETAPAS DE DEPURACÃO (pré-instalação) ---
 
@@ -59,45 +59,45 @@ jobs:
       # instalação do Yarn
       - name: Instalando Yarn
         run: npm install -g yarn
-        shell: pwsh
+        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
 
       # instalação das dependências
       - name: Instalando dependências
         run: yarn
-        shell: pwsh
-        
+        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
+
       # instalação do Playwright
       - name: Instalando Playwright
         run: yarn playwright install
-        shell: pwsh
+        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
 
       # execução dos testes
       - name: Executando testes E2E
         run: yarn run e2e
-        shell: pwsh
+        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
 
       # --- INÍCIO DAS ETAPAS DE DEPURACÃO (pós-execução de testes) ---
 
       - name: 4. Listar arquivos no diretório de trabalho após a execução dos testes (DETALHADO)
         run: |
           echo "Conteúdo de '$env:GITHUB_WORKSPACE' após a execução dos testes:"
-          Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 2 # Aumenta a profundidade para ver test-results
+          Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 2
           echo "Conteúdo da pasta 'test-results':"
           Get-ChildItem -Path "$env:GITHUB_WORKSPACE\test-results" -Recurse -ErrorAction SilentlyContinue
-        shell: pwsh
+        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
 
       - name: 5. Verificar e exibir conteúdo do results.xml gerado (DETALHADO)
         run: |
-          $reportPath = "$env:GITHUB_WORKSPACE\test-results\results.xml" # Caminho atualizado
+          $reportPath = "$env:GITHUB_WORKSPACE\test-results\results.xml"
           echo "Verificando o arquivo de relatório gerado: $reportPath"
           if (Test-Path $reportPath) {
             echo "Arquivo 'results.xml' encontrado. Conteúdo (primeiras 20 linhas):"
             Get-Content -Path $reportPath | Select-Object -First 20
           } else {
             echo "ERRO CRÍTICO: Arquivo 'results.xml' NÃO encontrado em '$reportPath' após a execução dos testes."
-            exit 1 # Falha o job se o arquivo não for encontrado
+            exit 1
           }
-        shell: pwsh
+        shell: powershell # <--- ALTERADO DE 'pwsh' PARA 'powershell'
 
       # --- FIM DAS ETAPAS DE DEPURACÃO ---
 
@@ -107,6 +107,5 @@ jobs:
         if: always()
         with:
           name: Test Report
-          # CUIDADO: O caminho aqui deve ser o mesmo que o Playwright está gerando
-          path: ./test-results/results.xml # <--- Caminho atualizado e correto
+          path: ./test-results/results.xml
           reporter: java-junit
