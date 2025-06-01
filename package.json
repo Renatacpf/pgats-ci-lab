@@ -33,12 +33,11 @@
     "prettier": "^3.2.4",
     "typescript": "^5.3.3",
     "whatwg-fetch": "^3.6.20"
-  }
+  },
   "jest": {
-  "reporters": [
-    "default",
-    [ "jest-junit", { "outputDirectory": "./test-results", "outputName": "results.xml" } ]
-  ]
-}
-
+    "reporters": [
+      "default",
+      ["jest-junit", { "outputDirectory": "./test-results", "outputName": "results.xml" }]
+    ]
+  }
 }
