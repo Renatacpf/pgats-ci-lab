@@ -105,7 +105,7 @@ jobs:
         with:
           name: Test Report
           path: ./test-results/results.xml
-          reporter: junit
+          reporter: java-junit
 
       # Upload do HTML Report do Playwright como artefato
       - name: Upload Playwright HTML Report
