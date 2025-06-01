@@ -48,6 +48,11 @@ jobs:
           echo "Arquivos existentes:"
           dir -Recurse
 
+      - name: Verificando arquivos gerados
+        run: |
+          echo "Arquivos em test-results:"
+          ls -la test-results || echo "Diretório test-results não encontrado"
+
       # Relatórios de Testes - Test ReportAdd commentMore actions
       - name: Publicar relatório de testes
         uses: dorny/test-reporter@v1
