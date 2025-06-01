@@ -51,4 +51,4 @@ jobs:
         with:
           name: Test Report
           path: results.xml
-          reporter: playwright
+          reporter: java-junit
