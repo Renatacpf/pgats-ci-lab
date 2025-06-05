@@ -15,6 +15,14 @@ jobs:
     steps:
       # clone do projeto
       - uses: actions/checkout@v4
+        with:
+          clean: true
+          submodules: 'false'
+
+      # ignore submodule warning (if applicable)
+      - name: Ignore submodule warning (se aplicável)
+        run: git config --global --add safe.directory '*'
+        shell: bash
 
       # instalação do Node.js
       - uses: actions/setup-node@v4
