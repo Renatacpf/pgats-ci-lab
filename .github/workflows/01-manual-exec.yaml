@@ -80,4 +80,4 @@ jobs:
           echo "- Total de Casos de Teste: 100" >> $GITHUB_STEP_SUMMARY
           echo "- Falhas: 0" >> $GITHUB_STEP_SUMMARY
           echo "- Tempo de Execução: 1m 30s" >> $GITHUB_STEP_SUMMARY
-        shell: bash # ou pwsh
+        shell: pwsh
