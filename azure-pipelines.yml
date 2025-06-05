@@ -1,7 +1,7 @@
 name: 'Execução Manual - $(Date:yyyyMMdd)$(Rev:r)'
 
 trigger:
-  - main
+  - none
 
 pool:
   name: Default
@@ -38,11 +38,4 @@ jobs:
       inputs:
         testResultsFormat: 'JUnit'
         testResultsFiles: '**/test-results/results.xml'
-      condition: always()
-
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publicar Relatório HTML do Playwright'
-      inputs:
-        pathToPublish: 'playwright-report/'
-        artifactName: 'playwright-html-report'
       condition: always()
