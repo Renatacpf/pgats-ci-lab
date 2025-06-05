@@ -56,29 +56,3 @@ jobs:
           name: Test Report
           path: ./test-results/results.xml
           reporter: java-junit
-
-      # Upload do HTML Report do Playwright como artefato
-      - name: Upload Playwright HTML Report
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: playwright-html-report
-          path: playwright-report/
-          retention-days: 30
-
-      - name: Adicionar link do relatório HTML ao resumo
-        run: |
-          echo "## Relatório HTML do Playwright" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
-          echo "Clique [aqui](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/playwright-html-report) para baixar e visualizar o relatório HTML completo." | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
-        shell: powershell
-        if: always()
-
-      - name: Exibir resumo personalizado no Summary
-        run: |
-          echo "# Meu Relatório Personalizado" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
-          echo "**Status dos Testes:** ✅ Aprovados" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
-          echo "- Total de Casos de Teste: 100" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
-          echo "- Falhas: 0" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
-          echo "- Tempo de Execução: 1m 30s" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
-        shell: powershell
-        if: always()
