@@ -1,7 +1,6 @@
 # Diretórios de dependências
 node_modules/
 .playwright/
-.vscode/
 
 # Relatórios de testes E2E e unitários
 /test-results/
@@ -29,8 +28,35 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+.env.development.local # Exemplo de ambiente específico que pode aparecer
+.env.test.local       # Exemplo de ambiente específico que pode aparecer
+.env.production.local # Exemplo de ambiente específico que pode aparecer
+
+# GitHub Actions Self-Hosted Runner (IMPORTANT - ADDED THIS)
+# Esta pasta não deve ser versionada, pois contém o executável e dados de trabalho do runner
+actions-runner/
 
 # Outros arquivos gerados por execução que não devem ir ao repositório
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.npm/ # Cache do npm (se o runner usar npm)
+.yarn/ # Cache do yarn (se o runner usar yarn)
+
+# Arquivos de build e dist (adicionado, comum em projetos JS)
+dist/
+build/
+out/
+es/
+lib/
+
+# Arquivos de IDEs e editores (adicionado para cobrir mais IDEs)
+.idea/ # IntelliJ IDEA
+.project # Eclipse
+.settings/ # Eclipse
+.c9/ # Cloud9
+.history/ # Visual Studio Code (histórico local)
+
+# Outros caches e logs comuns
+*.tgz # Pacotes tarball gerados pelo npm pack
+.pnpm-store/ # Cache do pnpm (se estiver usando pnpm)

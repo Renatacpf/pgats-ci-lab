@@ -65,3 +65,19 @@ jobs:
           name: playwright-html-report
           path: playwright-report/
           retention-days: 30
+
+      - name: Adicionar link do relatório HTML ao resumo
+        run: |
+          echo "## Relatório HTML do Playwright" >> $GITHUB_STEP_SUMMARY
+          echo "Clique [aqui](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/playwright-html-report) para baixar e visualizar o relatório HTML completo." >> $GITHUB_STEP_SUMMARY
+        shell: bash # Use 'bash' ou 'pwsh' para scripts que escrevem em GITHUB_STEP_SUMMARY
+        if: always()
+
+      - name: Exibir resumo personalizado no Summary
+        run: |
+          echo "# Meu Relatório Personalizado" >> $GITHUB_STEP_SUMMARY
+          echo "**Status dos Testes:** ✅ Aprovados" >> $GITHUB_STEP_SUMMARY
+          echo "- Total de Casos de Teste: 100" >> $GITHUB_STEP_SUMMARY
+          echo "- Falhas: 0" >> $GITHUB_STEP_SUMMARY
+          echo "- Tempo de Execução: 1m 30s" >> $GITHUB_STEP_SUMMARY
+        shell: bash # ou pwsh

@@ -1,33 +1,48 @@
+name: 'Execução Manual - $(Date:yyyyMMdd)$(Rev:r)'
+
 trigger:
-- main
+  - main
 
 pool:
   name: Default
 
-steps:
-  - checkout: self
-    displayName: 'Clonar o repositório'
+jobs:
+- job: e2e_tests
+  displayName: 'Execução de Testes E2E'
+  steps:
+    - checkout: self
+      displayName: 'Clonar o repositório'
 
-  - task: NodeTool@0
-    inputs:
-      versionSpec: '22.x'
-    displayName: 'Instalar Node.js'
+    - task: NodeTool@0
+      displayName: 'Instalar Node.js'
+      inputs:
+        versionSpec: '22.x'
 
-  - script: npm install -g yarn
-    displayName: 'Instalar Yarn'
+    - script: npm install -g yarn
+      displayName: 'Instalar Yarn Globalmente'
 
-  - script: yarn
-    displayName: 'Instalar dependências'
+    - script: yarn
+      displayName: 'Instalar Dependências (yarn)'
 
-  - script: yarn playwright install
-    displayName: 'Instalar Playwright'
+    - script: yarn run format:check
+      displayName: 'Checando Formatação com Prettier'
 
-  - script: yarn run e2e
-    displayName: 'Executar testes E2E'
+    - script: yarn playwright install
+      displayName: 'Instalar Playwright'
 
-  - task: PublishTestResults@2
-    displayName: 'Publicar Relatório de Testes'
-    inputs:
-      testResultsFormat: 'JUnit'
-      testResultsFiles: '**/results.xml'
-    condition: always()
+    - script: yarn run e2e
+      displayName: 'Executar Testes E2E'
+
+    - task: PublishTestResults@2
+      displayName: 'Publicar Relatório de Testes'
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/test-results/results.xml'
+      condition: always()
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publicar Relatório HTML do Playwright'
+      inputs:
+        pathToPublish: 'playwright-report/'
+        artifactName: 'playwright-html-report'
+      condition: always()
