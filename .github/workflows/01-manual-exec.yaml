@@ -19,11 +19,6 @@ jobs:
           clean: true
           submodules: 'false'
 
-      # ignore submodule warning (if applicable)
-      - name: Ignore submodule warning (se aplicável)
-        run: git config --global --add safe.directory '*'
-        shell: bash
-
       # instalação do Node.js
       - uses: actions/setup-node@v4
         with:

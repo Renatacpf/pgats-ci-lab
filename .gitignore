@@ -1,8 +1,36 @@
-node_modules
-.stryker-tmp
-reports
+# Diretórios de dependências
+node_modules/
+.playwright/
+.vscode/
+
+# Relatórios de testes E2E e unitários
 /test-results/
 /playwright-report/
 /blob-report/
-/playwright/.cache/
+/reports/
+/coverage/
 results.xml
+
+# Temporários do Stryker e cache
+.stryker-tmp/
+/playwright/.cache/
+
+# Arquivos de configuração locais e temporários
+*.log
+*.tmp
+*.cache
+*.local
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ambientes
+.env
+.env.local
+.env.*.local
+
+# Outros arquivos gerados por execução que não devem ir ao repositório
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
