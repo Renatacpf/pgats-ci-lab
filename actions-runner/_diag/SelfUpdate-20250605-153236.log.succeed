@@ -1,0 +1,20 @@
+[05/06/2025 12:32:36,26] --------whoami-------- 
+desktop-if6ubgf\user
+[05/06/2025 12:32:36,29] --------whoami-------- 
+[05/06/2025 12:32:36,30] Waiting for Runner.Listener.exe (6040) to complete 
+Runner.Listener.exe           6040 Console                    2     90.696 K
+[05/06/2025 12:32:36,38] Process 6040 still running, check again after 1 second. 
+[05/06/2025 12:32:37,52] Process 6040 finished running 
+[05/06/2025 12:32:37,52] Sleep 1 more second to make sure process exited 
+[05/06/2025 12:32:38,58] Re-organize folders 
+[05/06/2025 12:32:38,62] move "C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin" "C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin.2.324.0" 
+        1 dir(s) movido(s).
+[05/06/2025 12:32:38,66] move "C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals" "C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals.2.324.0" 
+        1 dir(s) movido(s).
+[05/06/2025 12:32:38,67] Create junction bin folder 
+Jun‡Æo criada para C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin <<===>> C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\bin.2.325.0
+[05/06/2025 12:32:38,70] Create junction externals folder 
+Jun‡Æo criada para C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals <<===>> C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\externals.2.325.0
+[05/06/2025 12:32:38,72] Update succeed 
+[05/06/2025 12:32:38,73] update.finished file creation succeed 
+[05/06/2025 12:32:38,74] Rename "C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\SelfUpdate-20250605-153236.log" to be "C:\Users\User\Renata\PosGraduacao\ProjetosJavaScript\pgats-ci-lab\actions-runner\_diag\SelfUpdate-20250605-153236.log.succeed" 

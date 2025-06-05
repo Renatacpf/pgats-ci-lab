@@ -15,9 +15,7 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:mutation": "npx stryker run",
     "start": "lite-server",
-    "e2e": "npx playwright test",
-    "allure:generate": "allure generate allure-results --clean -o allure-report",
-    "allure:open": "allure open allure-report"
+    "e2e": "npx playwright test"
   },
   "keywords": [],
   "author": "",

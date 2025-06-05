@@ -99,16 +99,13 @@ jobs:
       # --- FIM DAS ETAPAS DE DEPURACÃO ---
 
       # Gera o relatório após os testes
-      - name: Gerando relatório Allure
-        run: |
-          npx allure generate allure-results --clean -o allure-report
-
-      # Publica o relatório como artefato do GitHub Actions
-      - name: Publicando relatório Allure como artefato
-        uses: actions/upload-artifact@v4
+      - name: Publicar resultado no PR
+        uses: dorny/test-reporter@v1
+        if: always()
         with:
-          name: allure-report
-          path: allure-report
+          name: Test Report
+          path: ./test-results/results.xml
+          reporter: java-junit
 
       # Upload do HTML Report do Playwright como artefato
       - name: Upload Playwright HTML Report
