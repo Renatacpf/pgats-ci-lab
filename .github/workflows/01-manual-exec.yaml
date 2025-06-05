@@ -70,7 +70,7 @@ jobs:
         run: |
           echo "## Relatório HTML do Playwright" >> $GITHUB_STEP_SUMMARY
           echo "Clique [aqui](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/playwright-html-report) para baixar e visualizar o relatório HTML completo." >> $GITHUB_STEP_SUMMARY
-        shell: bash # Use 'bash' ou 'pwsh' para scripts que escrevem em GITHUB_STEP_SUMMARY
+        shell: powershell
         if: always()
 
       - name: Exibir resumo personalizado no Summary
@@ -80,4 +80,4 @@ jobs:
           echo "- Total de Casos de Teste: 100" >> $GITHUB_STEP_SUMMARY
           echo "- Falhas: 0" >> $GITHUB_STEP_SUMMARY
           echo "- Tempo de Execução: 1m 30s" >> $GITHUB_STEP_SUMMARY
-        shell: pwsh
+        shell: powershell
