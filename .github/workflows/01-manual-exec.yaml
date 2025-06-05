@@ -13,10 +13,17 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      # Limpeza do workspace do runner
+      - name: Limpeza preventiva no runner
+        run: |
+          Remove-Item -Recurse -Force $env:GITHUB_WORKSPACE\*
+        shell: powershell
+
       # clone do projeto
       - uses: actions/checkout@v4
         with:
           clean: true
+          submodules: false
 
       # instalação do Node.js
       - uses: actions/setup-node@v4

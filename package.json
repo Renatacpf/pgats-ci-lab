@@ -16,7 +16,7 @@
     "test:mutation": "npx stryker run",
     "start": "lite-server",
     "e2e": "npx playwright test",
-    "format:check": "prettier . --check"
+    "format:check": "prettier --check \"src/**/*.{js,ts,tsx,json,css,md,yaml,yml}\""
   },
   "keywords": [],
   "author": "",

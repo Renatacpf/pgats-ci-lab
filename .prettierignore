@@ -1,0 +1,3 @@
+# Ignorar arquivos de test ou scripts dentro da pasta actions-runner
+actions-runner/
+!**/src/**         # (opcional) caso você queira incluir só src
