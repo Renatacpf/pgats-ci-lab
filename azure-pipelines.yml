@@ -1,41 +1,38 @@
 name: 'Execução Manual - $(Date:yyyyMMdd)$(Rev:r)'
 
 trigger:
-  - none
+- main
 
 pool:
   name: Default
 
-jobs:
-- job: e2e_tests
-  displayName: 'Execução de Testes E2E'
-  steps:
-    - checkout: self
-      displayName: 'Clonar o repositório'
+steps:
+  - checkout: self
+    displayName: 'Clonar o repositório'
 
-    - task: NodeTool@0
-      displayName: 'Instalar Node.js'
-      inputs:
-        versionSpec: '22.x'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '22.x'
+    displayName: 'Instalar Node.js'
 
-    - script: npm install -g yarn
-      displayName: 'Instalar Yarn Globalmente'
+  - script: npm install -g yarn
+    displayName: 'Instalar Yarn'
 
-    - script: yarn
-      displayName: 'Instalar Dependências (yarn)'
+  - script: yarn
+    displayName: 'Instalar dependências'
 
-    - script: yarn run format:check
-      displayName: 'Checando Formatação com Prettier'
+  - script: yarn run format:check
+    displayName: 'Checando Formatação com Prettier'
 
-    - script: yarn playwright install
-      displayName: 'Instalar Playwright'
+  - script: yarn playwright install
+    displayName: 'Instalar Playwright'
 
-    - script: yarn run e2e
-      displayName: 'Executar Testes E2E'
+  - script: yarn run e2e
+    displayName: 'Executar testes E2E'
 
-    - task: PublishTestResults@2
-      displayName: 'Publicar Relatório de Testes'
-      inputs:
-        testResultsFormat: 'JUnit'
-        testResultsFiles: '**/test-results/results.xml'
-      condition: always()
+  - task: PublishTestResults@2
+    displayName: 'Publicar Relatório de Testes'
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: '**/results.xml'
+    condition: always()
