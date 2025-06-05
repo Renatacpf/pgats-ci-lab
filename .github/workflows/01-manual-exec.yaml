@@ -15,15 +15,6 @@ jobs:
     steps:
       # clone do projeto
       - uses: actions/checkout@v4
-        with:
-          clean: true
-          submodules: 'false'
-
-      # limpeza do projeto exceto .git
-      - name: Limpeza preventiva no runner
-        run: |
-          Get-ChildItem -Path $env:GITHUB_WORKSPACE -Exclude ".git" | Remove-Item -Recurse -Force
-        shell: powershell
 
       # instalação do Node.js
       - uses: actions/setup-node@v4
