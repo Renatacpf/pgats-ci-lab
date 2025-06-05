@@ -18,38 +18,6 @@ jobs:
         with:
           clean: true
 
-      # --- INÍCIO DAS ETAPAS DE DEPURACÃO APRIMORADAS ---
-      # (Mantendo suas etapas de depuração para visibilidade)
-      - name: 1. Listar arquivos e verificar diretório de trabalho (antes da limpeza)
-        run: |
-          echo "Diretório de trabalho atual: $(pwd)"
-          echo "Conteúdo de '$env:GITHUB_WORKSPACE' antes da limpeza:"
-          Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -ErrorAction SilentlyContinue
-          echo "Conteúdo de '$env:GITHUB_WORKSPACE\test-results' antes da limpeza:"
-          Get-ChildItem -Path "$env:GITHUB_WORKSPACE\test-results" -Recurse -ErrorAction SilentlyContinue
-        shell: powershell
-
-      - name: 2. Limpar diretório de relatórios antigos (remover a pasta inteira)
-        run: |
-          $reportDir = "$env:GITHUB_WORKSPACE\test-results"
-          echo "Tentando remover diretório de relatórios: $reportDir"
-          if (Test-Path $reportDir) {
-            Remove-Item -Path $reportDir -Recurse -Force -ErrorAction Stop
-            echo "Diretório de relatórios '$reportDir' removido com sucesso."
-          } else {
-            echo "Nenhum diretório de relatórios '$reportDir' encontrado para remover."
-          }
-        shell: powershell
-
-      - name: 3. Listar arquivos no diretório de trabalho após a limpeza
-        run: |
-          echo "Conteúdo de '$env:GITHUB_WORKSPACE' após a limpeza:"
-          Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 1
-          echo "Conteúdo de '$env:GITHUB_WORKSPACE\test-results' após a limpeza (deve estar vazio ou não existir):"
-          Get-ChildItem -Path "$env:GITHUB_WORKSPACE\test-results" -Recurse -ErrorAction SilentlyContinue
-        shell: powershell
-      # --- FIM DAS ETAPAS DE DEPURACÃO (pré-instalação) ---
-
       # instalação do Node.js
       - uses: actions/setup-node@v4
         with:
@@ -65,6 +33,11 @@ jobs:
         run: yarn
         shell: powershell
 
+      # Verificação de formatação de código com Prettier
+      - name: Checando formatação com Prettier
+        run: yarn run format:check
+        shell: powershell
+
       # instalação do Playwright
       - name: Instalando Playwright
         run: yarn playwright install
@@ -74,29 +47,6 @@ jobs:
       - name: Executando testes E2E
         run: yarn run e2e
         shell: powershell
-
-      # --- INÍCIO DAS ETAPAS DE DEPURACÃO (pós-execução de testes) ---
-      - name: 4. Listar arquivos no diretório de trabalho após a execução dos testes (DETALHADO)
-        run: |
-          echo "Conteúdo de '$env:GITHUB_WORKSPACE' após a execução dos testes:"
-          Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse -Depth 2
-          echo "Conteúdo da pasta 'test-results':"
-          Get-ChildItem -Path "$env:GITHUB_WORKSPACE\test-results" -Recurse -ErrorAction SilentlyContinue
-        shell: powershell
-
-      - name: 5. Verificar e exibir conteúdo do results.xml gerado (DETALHADO)
-        run: |
-          $reportPath = "$env:GITHUB_WORKSPACE\test-results\results.xml"
-          echo "Verificando o arquivo de relatório gerado: $reportPath"
-          if (Test-Path $reportPath) {
-            echo "Arquivo 'results.xml' encontrado. Conteúdo (primeiras 20 linhas):"
-            Get-Content -Path $reportPath | Select-Object -First 20
-          } else {
-            echo "ERRO CRÍTICO: Arquivo 'results.xml' NÃO encontrado em '$reportPath' após a execução dos testes."
-            exit 1
-          }
-        shell: powershell
-      # --- FIM DAS ETAPAS DE DEPURACÃO ---
 
       # Gera o relatório após os testes
       - name: Publicar resultado no PR

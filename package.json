@@ -15,7 +15,8 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:mutation": "npx stryker run",
     "start": "lite-server",
-    "e2e": "npx playwright test"
+    "e2e": "npx playwright test",
+    "format:check": "prettier . --check"
   },
   "keywords": [],
   "author": "",
@@ -33,7 +34,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-junit": "^16.0.0",
     "lite-server": "^2.6.1",
-    "prettier": "^3.2.4",
+    "prettier": "^3.5.3",
     "typescript": "^5.3.3",
     "whatwg-fetch": "^3.6.20"
   }
