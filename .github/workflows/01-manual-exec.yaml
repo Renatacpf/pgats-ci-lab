@@ -68,16 +68,17 @@ jobs:
 
       - name: Adicionar link do relatório HTML ao resumo
         run: |
-          echo "## Relatório HTML do Playwright" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8NoBOM -Append
-          echo "Clique [aqui](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/playwright-html-report) para baixar e visualizar o relatório HTML completo." | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8NoBOM -Append
+          echo "## Relatório HTML do Playwright" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+          echo "Clique [aqui](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/playwright-html-report) para baixar e visualizar o relatório HTML completo." | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
         shell: powershell
         if: always()
 
       - name: Exibir resumo personalizado no Summary
         run: |
-          echo "# Meu Relatório Personalizado" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8NoBOM -Append
-          echo "**Status dos Testes:** ✅ Aprovados" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8NoBOM -Append
-          echo "- Total de Casos de Teste: 100" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8NoBOM -Append
-          echo "- Falhas: 0" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8NoBOM -Append
-          echo "- Tempo de Execução: 1m 30s" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8NoBOM -Append
+          echo "# Meu Relatório Personalizado" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+          echo "**Status dos Testes:** ✅ Aprovados" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+          echo "- Total de Casos de Teste: 100" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+          echo "- Falhas: 0" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+          echo "- Tempo de Execução: 1m 30s" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
         shell: powershell
+        if: always()
