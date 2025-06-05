@@ -16,7 +16,6 @@ jobs:
       # clone do projeto
       - uses: actions/checkout@v4
         with:
-          clean: true
           submodules: false
 
       # instalação do Node.js
