@@ -20,6 +20,10 @@ jobs:
     steps:
       # clone do projeto
       - uses: actions/checkout@v4
+        with:
+          submodules: false
+          clean: true
+          fetch-depth: 0
 
       # instalação do Node.js
       - uses: actions/setup-node@v4
