@@ -14,7 +14,7 @@ on:
 # trabalhos/tarefas dentro do pipeline = jobs
 jobs:
   e2e-tests:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       # clone do projeto
