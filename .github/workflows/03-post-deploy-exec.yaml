@@ -30,27 +30,22 @@ jobs:
       # instalação do Yarn
       - name: Instalando Yarn
         run: npm install -g yarn
-        shell: powershell
 
       # instalação das dependências
       - name: Instalando dependências
         run: yarn
-        shell: powershell
 
       # Verificação de formatação de código com Prettier
       - name: Checando formatação com Prettier
         run: yarn run format:check
-        shell: powershell
 
       # instalação do Playwright
       - name: Instalando Playwright
         run: yarn playwright install
-        shell: powershell
 
       # execução dos testes
       - name: Executando testes E2E
         run: yarn run e2e
-        shell: powershell
 
       # Gera o relatório após os testes
       - name: Publicar resultado no PR
