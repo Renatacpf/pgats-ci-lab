@@ -61,12 +61,12 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-            name: relatorio
-            path: ./playwright-report
+          name: relatorio
+          path: ./playwright-report
 
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name:  Simulação do Deploy
+      - name: Simulação do Deploy
         run: echo 'Simulando o deploy com sucesso'

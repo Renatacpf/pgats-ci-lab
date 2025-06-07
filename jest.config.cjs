@@ -187,10 +187,13 @@ module.exports = {
   // watchman: true,
 
   reporters: [
-    "default",
-    [ "jest-junit", { 
-      outputDirectory: "test-results", 
-      outputName: "results.xml" 
-    }]
+    'default',
+    [
+      'jest-junit',
+      {
+        outputDirectory: 'test-results',
+        outputName: 'results.xml',
+      },
+    ],
   ],
 };
