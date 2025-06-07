@@ -16,6 +16,11 @@ jobs:
   e2e-tests:
     runs-on: ubuntu-latest
 
+    # condicioal - if
+    # `${ expressao }`
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
     steps:
       # clone do projeto
       - uses: actions/checkout@v4
