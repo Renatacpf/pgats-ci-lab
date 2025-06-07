@@ -49,7 +49,7 @@ jobs:
       # Gera o relatório após os testes
       - name: Publicar resultado no PR
         uses: dorny/test-reporter@v1
-        if: always()
+        if: ${{ !cancelled() }}
         with:
           name: Test Report
           path: ./test-results/results.xml
